@@ -1,0 +1,23 @@
+{
+  "name": "quickbar-updater",
+  "version": "0.0.0",
+  "description": "Script to update content of quickbar",
+  "main": "update.sh",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Entkenntnis/quickbar-updater.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Entkenntnis/quickbar-updater/issues"
+  },
+  "homepage": "https://github.com/Entkenntnis/quickbar-updater#readme",
+  "dependencies": {
+    "graphql-request": "^3.4.0",
+    "node-fetch": "^2.6.1"
+  }
+}
