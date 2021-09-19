@@ -15,15 +15,17 @@ const visitsRl = readline.createInterface({
 
 visitsRl.on('line', (line) => {
   const parts = line.split(',')
-  if (parts.length < 5) return // to short
-  if (parts[0].includes('unix')) return //headline
-  const date = parts[1].substring(0, 10)
-  /*if (date.localeCompare(offsetToDate[-7]) < 0) {
-    return // too old
-  }*/
+  if (parts.length < 5) {
+    console.log('too short')
+    return // to short
+  }
+  if (parts[0].includes('added_date')) {
+    console.log('headline')
+    return //headline
+  }
+
   
-  
-  const path = parts[2].replace('http://de.serlo.org', '').replace('https://de.serlo.org', '')
+  const path = parts[1].replace('http://de.serlo.org', '').replace('https://de.serlo.org', '')
   
   let id = -1
   const m = /^(?:(?:\/[^\/]+)?\/([\d]+)\/[^\/]+|\/([\d]+)|\/taxonomy\/term\/get\/([\d]+))$/.exec(path)
@@ -37,7 +39,9 @@ visitsRl.on('line', (line) => {
     }
   }
 
-  if (id == -1) return // ignore
+  if (id == -1) {
+    return // ignore
+  }
     
   if (!counter[id]) {
     counter[id] = 0
