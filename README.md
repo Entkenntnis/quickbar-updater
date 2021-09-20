@@ -10,7 +10,7 @@ You can run this script every day, it should complete in max 30 minutes (with lo
 
 ### 1. v2-fetch-from-sa.js
 
-Load page views from simple analytics - last 3 weeks, please insert valid token for authentication.
+Load page views from simple analytics - last 3 weeks, **please insert valid token for authentication**.
 
 ### 2. extractTop.js
 
