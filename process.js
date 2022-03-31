@@ -69,7 +69,8 @@ for (const entry of data) {
       title,
       path: outpath,
       isTax: type == 'TaxonomyTerm' && !title.toLowerCase().includes('aufgabe'),
-      count: entry.count
+      count: entry.count,
+      root: path[0]
     }
     quickbar.push(output)
   }
